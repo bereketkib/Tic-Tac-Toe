@@ -71,9 +71,17 @@ const Game = (() => {
     const result = document.querySelector("#result");
 
     const start = () => {
+        player1 = document.querySelector("#player1").value;
+        player2 = document.querySelector("#player2").value;
+        if (player1 === "") {
+            player1 = "player 1";
+        }
+        if (player2 === "") {
+            player2 = "player 2";
+        }
         players = [
-            createPlayer(document.querySelector("#player1").value, "X"),
-            createPlayer(document.querySelector("#player2").value, "O")
+            createPlayer(player1, "X"),
+            createPlayer(player2, "O")
         ];
         currentPlayerIndex = 0;
         result.textContent = `${players[currentPlayerIndex].name}'s turn`;
