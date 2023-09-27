@@ -1,19 +1,103 @@
-#gameboard {
+
+body {
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: start;
+    background-color: #09090b;
+    color: white;
+}
+h1 {
+    margin-top: 8px;
+    color: #c4b5fd;
+    font-size: 2.5em;
+    margin-bottom: 48px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 5px 0 5px 5px #8b5cf6;
+}
+
+#gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
     height: 300px;
+    width: 300px;
+    box-shadow: 10px 10px 10px 10px #8b5cf6, -10px -10px 10px 10px #8b5cf6;
 }
 .square {
+    padding: 0;
+    border: 1px solid #6d28d9;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #c4b5fd;
     display: flex;
-    flex-wrap: wrap;
-    float: left;
-    border: 1px solid black;
     justify-content: center;
     align-items: center;
-    width: 25%;
-    height: 30%;
+    font-size: 4em;
+}
+.controls {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    color: #c4b5fd;
+    
+}
+input {
+    min-width: 250px;
+    margin-top: 15px;
+    background-color: #09090b;
+    padding: 4px 8px;
+    color: white;
+    border: 1px solid #6d28d9;
+    color: inherit;
+}
+input:focus {
+    border-color: white;
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+}
+
+button {
+    background-color: #09090b;
+    border: 2px solid #6d28d9;
+    padding: 16px 42px;
+    color: #6d28d9;
+    font-size: 1em;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+
+#result {
+    margin-top: 24px;
+    font-size: 1em;
+    color: #c4b5fd;
+}
+
+#message {
+    margin-top: 32px;
+    font-size: 1em;
+    color: black;
+    padding: 32px;
+    width: 100%;
     text-align: center;
-    font-size: 80px;
+
+}
+.win {
+    background-color: #2dd4bf;
+}
+.tie {
+    background-color: #bef264;
 }

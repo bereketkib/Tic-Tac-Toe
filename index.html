@@ -12,13 +12,24 @@
     <h1>Tic Tac Toe</h1>
     <div id="gameboard"></div>
     <div class="controls">
-        <input type="text" id="player1" placeholder="Player 1 Name">
-        <input type="text" id="player2" placeholder="Player 2 Name">
-        <button id="start-button">Start Game</button>
-        <button id="restart-button">Restart Game</button>
+        <div class="inputs">
+            <label for="player1">Enter player 1 name:</label>
+            <input type="text" id="player1" placeholder="Player 1 Name">
+            <p>Symbol = X</p>
+        </div>
+        <div class="inputs">
+            <label for="player2">Enter player 2 name:</label>
+            <input type="text" id="player2" placeholder="Player 2 Name">
+            <p>Symbol = O</p>
+        </div>
+        <div class="buttons">
+            <button id="start-button">Start Game</button>
+            <button id="restart-button">Restart Game</button>
+        </div>
     </div>
+    <div id="result"></div>
     <div id="message"></div>
-    <div id="result-display"></div>
+    
     
 </body>
 </html>
